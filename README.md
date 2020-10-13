@@ -3,7 +3,5 @@
 * Clone in `~/` or `/opt/`
 * `cd .scripts`
 * Run `./init.sh`
-* Add below to your `~/.profile` or other shell init scripts
-```
-export PATH=$PATH:$(pwd)
-```
+* Add the root to your PATH in `~/.profile` or other shell init scripts
+  * `echo "export PATH=\$PATH:$(pwd)" >> ~/.profile`
