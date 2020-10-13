@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+while read lines
+do
+	echo "$lines" | node /Users/nullfunction/Documents/Powerscripts/math2tex.js | sed 's/.*/\$\\ &\$\\/'
+done

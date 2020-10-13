@@ -1,0 +1,9 @@
+[submodule "asciimathml-pandocfilter"]
+	path = asciimathml-pandocfilter
+	url = https://github.com/yuwash/asciimathml-pandocfilter
+[submodule "mermaid-filter"]
+	path = mermaid-filter
+	url = https://github.com/raghur/mermaid-filter
+[submodule "lev2"]
+	path = lev2
+	url = https://github.com/i404788/lev2.git

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+IFS='.' # hyphen (-) is set as delimiter
+read -ra ADDR <<< "$1" # str is read into an array as tokens separated by IFS
+IFS=' ' # reset to default value after usage
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+
+: | pdflatex -halt-on-error $ADDR.tex | grep '^!.*' -A200 --color=always 
+rm $ADDR.aux $ADDR.log

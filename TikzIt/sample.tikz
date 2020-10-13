@@ -1,0 +1,14 @@
+\begin{tikzpicture}[{pre/.style}={=stealth',semithick}, {post/.style}={->,shorten >=1pt,>=stealth',semithick}]
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Medium Box] (0) at (6, 5.75) {ES-MLP};
+		\node [style=Medium Box] (1) at (-0.25, 3.5) {Indicators};
+		\node [style=none] (2) at (-3.75, 4.75) {};
+		\node [style=none] (3) at (4.75, 8) {\param{\alpha}};
+		\node [style=Medium Box] (4) at (-0.25, 5.75) {WaveNet Pred.};
+		\node [style=none] (5) at (7.5, 10.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Right Edge, rounded corners=5pt] (1) to (0);
+		\draw [style=Right Edge, rounded corners=5pt] (4) to (0);
+	\end{pgfonlayer}
+\end{tikzpicture}

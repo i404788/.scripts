@@ -1,0 +1,8 @@
+\usepackage{bm}
+\newcommand{\param}[1]{\ensuremath{\vec{\bm{#1}}}}
+
+\tikzset{
+    -|/.style={to path={-| (\tikztotarget)}},
+    |-/.style={to path={|- (\tikztotarget)}},
+}
+

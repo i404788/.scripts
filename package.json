@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "asciimath-to-latex": "^0.3.2",
+    "pandoc-filter": "^1.0.0"
+  }
+}
