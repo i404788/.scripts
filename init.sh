@@ -13,6 +13,7 @@ assert_command_exists pdflatex
 
 echo "Found all dependencies..."
 
+# TODO: select which modules to add
 git submodule update --init --recursive
 
 install_yarn_deps() {
